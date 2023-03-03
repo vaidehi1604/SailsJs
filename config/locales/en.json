@@ -1,0 +1,11 @@
+{
+	"Welcome": "Welcome",
+	"A brand new app.": "A brand new app.",
+	"authsuccess": "user succesfully added!!!",
+	"welcome": "welcome",
+	"hello": "hello",
+   "email":"Email already exist!!",
+   "token":"Token  generated!!",
+   "notToken":"Token not generated!!"
+
+}
