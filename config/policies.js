@@ -17,9 +17,13 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
-  UserController:{
-    // "userLogin":"isLoggedin"
+  // '*': "isLoggedin",
+  CategoryController:{
+    "addCategory":"isLoggedin"
   }
-
+,
+UserController:{
+  "userLogout":"isLoggedin"
+}
+  
 };

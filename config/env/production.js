@@ -156,7 +156,6 @@ module.exports = {
   },
 
 
-
   /***************************************************************************
   *                                                                          *
   * Configure how your app handles sessions in production.                   *

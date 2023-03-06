@@ -12,8 +12,8 @@ module.exports.routes = {
 
     'POST /user': 'UserController.userSignup',
     'POST /user/login': 'UserController.userLogin',
+    'POST /user/logout': 'UserController.userLogout',
     'POST /category': 'CategoryController.addCategory',
     'POST /product': 'ProductController.addProduct',
-
 
 };

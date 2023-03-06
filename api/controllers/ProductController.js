@@ -9,13 +9,18 @@ module.exports = {
   
 
     addProduct:async (req,res)=>{
-        const {product,quantity}=req.body;
+    const lang = req.getLocale();
+
+        const {product,quantity,price,category}=req.body;
         const newProduct = await Product.create({
             product,
             quantity,
+            price,
+            category
           }).fetch()
         return res.status(200).json({
-            message:"Product Added Successfully"
+        message: sails.__("productAdd", lang),
+
         })
     }
 

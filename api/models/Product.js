@@ -8,6 +8,10 @@ module.exports.Product = {
       type: "Number",
       required: true,
     },
+    price:{
+      type: "Number",
+      required: true,
+    },
     category: {
       collection: "category",
     },

@@ -1,19 +1,24 @@
-const jwt=require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config();
 
-module.exports = async (req, res) => {
-      try {
-        const token = req.headers.authorization.split(" ")[1];
-        console.log(token);
-        const decode = jwt.verify(token, 'h1y2u3v7zxvsgdjiruwk');
+
+module.exports = async (req, res, next) => {
+  try {
+    const token = await req.headers.authorization.split(" ")[1];
+    console.log(token);
     
-        req.userData = decode;
-        console.log(decode);
-      } 
-      catch (error) {
-        return res.status(401).json({
-          message: "authentication failed!!",
-        });
-      }
+    const decode = await jwt.verify(token, process.env.JWT_KEY);
+    req.userData = decode;
+   const user = await User.findOne(decode.email)
+    if(!decode){
+      return res.status(400).json({message:"token not match"});
     }
+
+    return next();
+  } catch (error) {
+    return res.status(401).json({
+      message: "authentication failed!!!!!!",
+    });
+  }
+};

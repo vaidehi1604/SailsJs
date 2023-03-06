@@ -8,6 +8,14 @@ module.exports = {
 
 
   inputs: {
+    // token:{
+    //   type: "String",
+    //   required: true,
+    // },
+    // secret:{
+    //   type: "String",
+    //   required: true,
+    // }
 
   },
 
@@ -20,9 +28,19 @@ module.exports = {
 
   },
 
+  fn: async function () {
+    //  const {token,secret}=input;
 
-  fn: async function (inputs) {
-    // TODO
+    //  try {
+    //   const decoded = await verifyToken(token);
+    //   console.log(decoded); 
+    //    if(decode.success){
+    //     console.log(decode.message);
+    //    }
+    // } catch (err) {
+    //   console.error(err);
+    // }
+
   }
 
 

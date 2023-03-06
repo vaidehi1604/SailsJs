@@ -4,8 +4,9 @@
 	"authsuccess": "user succesfully added!!!",
 	"welcome": "welcome",
 	"hello": "hello",
-   "email":"Email already exist!!",
-   "token":"Token  generated!!",
-   "notToken":"Token not generated!!"
+	"email": "Email already exist!!",
+	"token": "Token  generated!!",
+	"notToken": "Token not generated!!",
+"productAdd":"Product Added Successfully"
 
 }
